@@ -21,7 +21,7 @@ namespace DataAccess
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"server=(localdb)\MSSQLLocalDB ;database=BackendDb;Trusted_Connection=true");
+            optionsBuilder.UseSqlServer(@"Server=193.53.87.166; database=TufanBoyaDb; user id = sa;  password=CRy5RcSGe526aS; Trusted_Connection=false");
         }
 
     }

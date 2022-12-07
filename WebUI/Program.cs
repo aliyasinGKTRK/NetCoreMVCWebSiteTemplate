@@ -1,8 +1,41 @@
 
+using Business.Abstract;
+using Business.Concrete;
+using DataAccess.Abstract;
+using DataAccess.Concrete;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<ISliderDal, EfSliderDal>();
+builder.Services.AddScoped<ISliderService, SliderManager>();
+
+builder.Services.AddScoped<IProductDal, EfProductDal>();
+builder.Services.AddScoped<IProductService, ProductManager>();
+
+builder.Services.AddScoped<IAboutDal, EfAboutDal>();
+builder.Services.AddScoped<IAboutService, AboutManager>();
+
+builder.Services.AddScoped<IContactDal, EfContactDal>();
+builder.Services.AddScoped<IContactService, ContactManager>();
+
+builder.Services.AddScoped<IProductDal,EfProductDal>();
+builder.Services.AddScoped<IProductService,ProductManager>();
+
+
+builder.Services.AddScoped<ICategoryDal,EfCategoryDal>();
+builder.Services.AddScoped<ICategoryService,CategoryManager>();
+
+builder.Services.AddScoped<IGalleryDal,EfGalleryDal>();
+builder.Services.AddScoped<IGalleryService, GalleryManager>();
+
+builder.Services.AddScoped<IReferanceDal, EfReferanceDal>();
+builder.Services.AddScoped<IReferanceService, ReferanceManager>();
+
+builder.Services.AddScoped <IServiceDal, EfServiceDal> ();
+builder.Services.AddScoped <IByServiceService, BySeviceManager> ();
 
 var app = builder.Build();
 

@@ -2,6 +2,7 @@
 using DataAccess.Concrete;
 using Entity;
 using Microsoft.AspNetCore.Mvc;
+using System.Globalization;
 
 namespace WebUI.Controllers.Admin
 {
@@ -82,9 +83,10 @@ namespace WebUI.Controllers.Admin
         [HttpPost]
         public IActionResult CategoryAdd(Category category)
         {
+            category.Statu = true;
+            category.CreateDate = DateTime.Parse(DateTime.Now.ToShortDateString());
             categoryManager.Add(category);
             return RedirectToAction("CategoryList");
-
         }
 
         public IActionResult CategoryDelete(int id)

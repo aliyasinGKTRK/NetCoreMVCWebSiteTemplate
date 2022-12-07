@@ -17,6 +17,17 @@ namespace WebUI.Controllers
         {
             return View();
         }
+        public IActionResult IndexEng()
+        {
+            return View();
+        }
+
+
+        public IActionResult IndexDe()
+        {
+            return View();
+        }
+
 
         public IActionResult Privacy()
         {

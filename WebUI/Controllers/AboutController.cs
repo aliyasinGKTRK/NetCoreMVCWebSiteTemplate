@@ -1,4 +1,5 @@
-﻿using Business.Concrete;
+﻿using Business.Abstract;
+using Business.Concrete;
 using DataAccess.Concrete;
 using Entity;
 using Microsoft.AspNetCore.Mvc;
@@ -7,30 +8,44 @@ namespace WebUI.Controllers
 {
     public class AboutController : Controller
     {
-        AboutManager aboutManager = new AboutManager(new EfAboutDal());
+       IAboutService _aboutService;
+
+        public AboutController(IAboutService aboutService)
+        {
+            _aboutService = aboutService;
+        }
+
         public IActionResult Index()
         {
-            var result = aboutManager.GetAll();
-            return View(result);
+            return View();
+        }
+
+        public IActionResult IndexDe()
+        {
+            return View();
+        }
+
+        public IActionResult IndexEng()
+        {
+            return View();
         }
 
         [HttpGet]
         public IActionResult AboutAdd()
         {
+            
             return View();
         }
 
         [HttpPost]
         public IActionResult AboutAdd(About about)
         {
-            aboutManager.Add(about);
             return RedirectToAction("AdminList","About");
         }
 
         public IActionResult AdminList()
         {
-            var result = aboutManager.GetAll();
-            return View(result);
+            return View();
         }
 
 

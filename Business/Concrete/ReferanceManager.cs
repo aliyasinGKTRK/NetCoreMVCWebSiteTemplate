@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Business.Concrete
 {
-    public class ReferanceManager : IReferanceManager
+    public class ReferanceManager : IReferanceService
     {
         IReferanceDal _referanceDal;
 
@@ -28,14 +28,15 @@ namespace Business.Concrete
             _referanceDal.Delete(referance);
         }
 
-        public Referance Get(int id)
-        {
-            return _referanceDal.GetById(id);
-        }
 
         public List<Referance> GetAll()
         {
             return _referanceDal.GetAll().ToList();
+        }
+
+        public Referance GetById(int id)
+        {
+            return _referanceDal.GetById(id);
         }
 
         public void Update(Referance referance)

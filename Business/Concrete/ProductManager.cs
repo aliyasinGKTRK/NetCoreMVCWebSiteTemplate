@@ -34,6 +34,11 @@ namespace Business.Concrete
             return _productDal.GetAll();
         }
 
+        public List<Product> GetByCategory(int categoryId)
+        {
+            return _productDal.GetList(x=>x.CategoryId==categoryId).ToList();
+        }
+
         public Product GetById(int id)
         {
             return _productDal.GetById(id);

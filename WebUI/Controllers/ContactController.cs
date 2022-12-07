@@ -1,4 +1,5 @@
-﻿using Business.Concrete;
+﻿using Business.Abstract;
+using Business.Concrete;
 using DataAccess.Concrete;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,11 +7,29 @@ namespace WebUI.Controllers
 {
     public class ContactController : Controller
     {
-        ContactManager contactManager = new ContactManager(new EfContactDal());
+        IContactService _contactService;
+
+        public ContactController(IContactService contactService)
+        {
+            _contactService = contactService;
+        }
+
         public IActionResult Index()
         {
-            var result = contactManager.GetAll();
-            return View(result);
+
+            return View();
+        }
+
+        public IActionResult IndexDe()
+        {
+
+            return View();
+        }
+
+        public IActionResult IndexEng()
+        {
+
+            return View();
         }
     }
 }

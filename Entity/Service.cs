@@ -12,6 +12,7 @@ namespace Entity
     {
         [Key]
         public int ServiceId { get; set; }
+
         public string? ServiceName { get; set; }
         public string? ServiceContent { get; set; }
         public string? ServiceIcon { get; set; }

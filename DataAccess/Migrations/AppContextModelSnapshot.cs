@@ -61,6 +61,12 @@ namespace DataAccess.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("NameDe")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NameEng")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("Statu")
                         .HasColumnType("bit");
 

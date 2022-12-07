@@ -7,7 +7,12 @@ using System.Threading.Tasks;
 
 namespace Business.Abstract
 {
-    public interface IByServiceService:IProductService<Service>
+    public interface IByServiceService
     {
+        void Add(Service service);
+        void Delete(Service service);
+        void Update(Service service);
+        Service GetById(int id);
+        List<Service> GetAll();
     }
 }

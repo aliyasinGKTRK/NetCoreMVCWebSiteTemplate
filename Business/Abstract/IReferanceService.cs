@@ -7,9 +7,13 @@ using System.Threading.Tasks;
 
 namespace Business.Abstract
 {
-    public interface IReferanceService:IProductService<Referance>
+    public interface IReferanceService
     {
-        
+        void Add(Referance referance);
+        void Delete(Referance referance);
+        void Update(Referance referance);
+        Referance GetById(int id);
+        List<Referance> GetAll();
+
     }
 }
-

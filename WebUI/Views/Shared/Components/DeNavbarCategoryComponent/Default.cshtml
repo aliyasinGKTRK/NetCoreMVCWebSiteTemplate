@@ -1,0 +1,11 @@
+﻿@model List<Entity.Category>
+
+<ul class="nav-submenu menu-content">
+    @foreach (var item in Model)
+    {
+        <li>
+            <a href="/Product/GetByCategoryDe/@item.CategoryId">@item.NameDe</a>
+        </li>
+    }
+
+</ul>

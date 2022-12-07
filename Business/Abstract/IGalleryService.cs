@@ -7,7 +7,12 @@ using System.Threading.Tasks;
 
 namespace Business.Abstract
 {
-    public interface IGalleryService:IProductService<Gallery>
+    public interface IGalleryService
     {
+        void Add(Gallery gallery);
+        void Delete(Gallery gallery);
+        void Update(Gallery gallery);
+        Gallery GetById(int id);
+        List<Gallery> GetAll();
     }
 }
