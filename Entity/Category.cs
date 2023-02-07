@@ -15,8 +15,8 @@ namespace Entity
         public string? Name { get; set; }
         public string? NameEng { get; set; }
         public string? NameDe { get; set; }
-        
+        public string? ImagePath { get; set; }
 
-        
+
     }
 }

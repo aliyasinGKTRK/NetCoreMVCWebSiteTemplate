@@ -1,7 +1,211 @@
-﻿
+﻿@model List<Entity.Product>
+
 @{
     ViewData["Title"] = "GetDetail";
 }
 
-<h1>GetDetail</h1>
+<section class="breadcrumb-section section-b-space">
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                @foreach (var item in Model)
+                {
+                    <h3>@item.ProductName</h3>
 
+                    <nav>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="Home/Index">
+                                    <i class="fas fa-home"></i>
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">@item.ProductName</li>
+                        </ol>
+                    </nav>
+                }
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Breadcrumb section end -->
+<!-- Shop Section start -->
+<section>
+    <div class="container">
+        <div class="row gx-4 gy-5">
+            <div class="col-lg-12 col-12">
+                @foreach (var item in Model)
+                {
+                    <div class="details-items">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="row g-4 ratio_asos">
+                                    <div class="col-12">
+                                        <img style="width:92%;" src="~/urunler/@item.ImagePath" class="img-fluid w-60" alt="">
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="cloth-details-size">
+                                    <span class="font-light grid-content">Tufan Boya Pass</span>
+                                    <div class="details-image-concept">
+                                        <h2> @item.ProductName</h2>
+                                    </div>
+                                    <h3 class="price-detail">@item.Price @item.MonyType</h3>
+
+                                    <div class="product-buttons">
+                                        <a href="/Contact/Index" id="cartEffect" class="btn btn-solid hover-solid btn-animation">
+                                            <i class="fa-solid fa-phone"></i>
+                                            <span> İletişim</span>
+                                        </a>
+
+                                        <a href="/Contact/Index" id="cartEffect" class="btn btn-solid hover-solid btn-animation">
+                                            <i class="fa-brands fa-whatsapp"></i>
+                                            <span>Whatsapp Sipariş</span>
+                                        </a>
+
+                                    </div>
+
+                                    <div class="product-buttons">
+
+                                        <a style="padding: 12px 271px;" href="javascript:void(0)" id="cartEffect" class="btn btn-solid hover-solid btn-animation">
+                                            <i class="fa-sharp fa-solid fa-share"></i>                                            <span>Whatsapp Paylaş</span>
+                                        </a>
+                                    </div>
+
+
+                                    <div id="selectSize" class="addeffect-section product-description border-product">
+                                        <h6 class="product-title size-text">
+                                            select size
+                                        </h6>
+
+                                        <h6 class="error-message">please select size</h6>
+
+
+                                        <p>Ürün hakkında detaylı bilgiye sahip olmak, fiyat ve ödeme koşulları hakkında bilgi almak için bizlere +90 (212) 474 33 43 No lu telefon üzerinden ve info@pass.com.tr mail adresi üzerinden ulaşabilirsiniz. </p>
+
+
+
+                                    </div>
+
+
+
+                                    <div class="border-product">
+                                        <h6 class="product-title d-block">share it</h6>
+                                        <div class="product-icon">
+                                            <ul class="product-social">
+                                                <li>
+                                                    <a href="../../index.htm">
+                                                        <i class="fab fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="../../index-4.htm">
+                                                        <i class="fab fa-google-plus-g"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="../../index-2.htm">
+                                                        <i class="fab fa-twitter"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="../../index-1.htm">
+                                                        <i class="fab fa-instagram"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="pe-0">
+                                                    <a href="../../index-4.htm">
+                                                        <i class="fas fa-rss"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+            </div>
+
+            <div class="col-12">
+                <div class="cloth-review">
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+
+
+                            <button class="nav-link" id="nav-size-tab" data-bs-toggle="tab" data-bs-target="#nav-guide" type="button">Sizing Guide</button>
+
+
+                        </div>
+                    </nav>
+
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="desc">
+                            <table class="table table-pane mb-0">
+                                @foreach (var item in Model)
+                                {
+                                    <tbody>
+                                        <tr class="bg-color">
+                                            <th class="my-2">@item.Ozellik1</th>
+                                            <td>@item.OzellikDeger1</td>
+                                            <td>@item.OzellikDeger1</td>
+                
+                                        </tr>
+
+                                        <tr>
+                                        <tr>
+                                            <th class="my-2">@item.Ozellik2</th>
+                                            <td>@item.OzellikDeger2</td>
+                                            <td>@item.OzellikDeger2</td>
+
+                                        </tr>
+                                        <tr class="bg-color">
+                                            <th class="my-2">@item.Ozellik3</th>
+                                            <td>@item.OzellikDeger3</td>
+                                            <td>@item.OzellikDeger3</td>
+
+                                        </tr>
+
+                                        <tr>
+                                            <th class="my-2">@item.Ozellik4</th>
+                                            <td>@item.OzellikDeger4</td>
+                                            <td>@item.OzellikDeger4</td>
+
+                                        </tr>
+
+           
+                                    </tbody>
+
+                                }
+                            </table>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Shop Section end -->
+<!-- product section start -->
+@await Component.InvokeAsync("ProductList")

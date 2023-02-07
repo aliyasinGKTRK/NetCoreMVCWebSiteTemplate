@@ -23,23 +23,42 @@ namespace WebUI.Controllers
 
         public IActionResult IndexDe()
         {
-            return View();
+            var result = _productService.GetAll();
+
+            return View(result);
         }
 
         public IActionResult IndexEng()
         {
-            return View();
+            var result = _productService.GetAll();
+
+            return View(result);
         }
 
 
         public IActionResult GetDetail(int id)
         {
-            return View();
+            var result = _productService.GetByDetail(id);
+            return View(result);
+
         }
 
-        public IActionResult GetByCategory(int categoryId)
+        public IActionResult GetDetailDe(int id)
         {
-            var result = _productService.GetByCategory(categoryId);
+            var result = _productService.GetByDetail(id);
+            return View(result);
+
+        }
+
+        public IActionResult GetDetailEng(int id)
+        {
+            var result = _productService.GetByDetail(id);
+            return View(result);
+
+        }
+        public IActionResult GetByCategory(int id)
+        {
+            var result = _productService.GetByCategory(id);
             return View(result);
         }
 

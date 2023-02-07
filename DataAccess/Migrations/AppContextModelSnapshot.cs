@@ -39,6 +39,12 @@ namespace DataAccess.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("DescriptionDe")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DescriptionEng")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("Statu")
                         .HasColumnType("bit");
 
@@ -172,13 +178,121 @@ namespace DataAccess.Migrations
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("ImagePath")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MonyType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Ozellik1")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Ozellik1De")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Ozellik1Eng")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Ozellik2")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Ozellik2De")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Ozellik2Eng")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Ozellik3")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Ozellik3De")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Ozellik3Eng")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Ozellik4")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Ozellik4De")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Ozellik4Eng")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Ozellik5")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Ozellik5De")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Ozellik5Eng")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OzellikDeger1")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OzellikDeger1De")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OzellikDeger1Eng")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OzellikDeger2")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OzellikDeger2De")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OzellikDeger2Eng")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OzellikDeger3")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OzellikDeger3De")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OzellikDeger3Eng")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OzellikDeger4")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OzellikDeger4De")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OzellikDeger4Eng")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OzellikDeger5")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OzellikDeger5De")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OzellikDeger5Eng")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Price")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ProductDescription")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ProductDescriptionDe")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductDescriptionEng")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ProductName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductNameDe")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductNameEng")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Quantity")
@@ -191,6 +305,12 @@ namespace DataAccess.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TumbName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TumbNameDe")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TumbNameEng")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ProductId");

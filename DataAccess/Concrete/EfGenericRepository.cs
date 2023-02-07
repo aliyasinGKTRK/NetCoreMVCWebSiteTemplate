@@ -60,6 +60,17 @@ namespace DataAccess.Concrete
             }
         }
 
+        public List<T> List(Expression<Func<T, bool>> filter )
+        {
+            using (var context = new AppContext())
+            {
+
+                return filter == null
+                    ? context.Set<T>().ToList()
+                    : context.Set<T>().Where(filter).ToList();
+            }
+        }
+
         public void Update(T entity)
         {
             using (var context = new AppContext())

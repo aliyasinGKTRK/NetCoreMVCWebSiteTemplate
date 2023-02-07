@@ -14,7 +14,7 @@ namespace WebUI.ViewComponents
 
         public IViewComponentResult Invoke()
         {
-            var result = _productService.GetAll();
+            var result = _productService.GetAll().OrderBy(x => Guid.NewGuid()).Take(20);
             return View(result);
         }
     }

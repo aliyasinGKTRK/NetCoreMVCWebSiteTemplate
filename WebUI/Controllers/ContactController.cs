@@ -16,20 +16,20 @@ namespace WebUI.Controllers
 
         public IActionResult Index()
         {
-
-            return View();
+            var result = _contactService.GetAll();
+            return View(result);
         }
 
         public IActionResult IndexDe()
         {
-
-            return View();
+            var result = _contactService.GetAll();
+            return View(result);
         }
 
         public IActionResult IndexEng()
         {
-
-            return View();
+            var result = _contactService.GetAll();
+            return View(result);
         }
     }
 }

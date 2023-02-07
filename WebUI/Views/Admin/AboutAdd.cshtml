@@ -1,39 +1,66 @@
 ﻿@model Entity.About
 @{
     ViewData["Title"] = "AboutAdd";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
 }
 
-<h1>AboutAd</h1>
+<div class="main-container">
+		<div class="pd-ltr-20 xs-pd-20-10">
+			<div class="min-height-200px">
+				<div class="page-header">
+					<div class="row">
+						<div class="col-md-6 col-sm-12">
+							<div class="title">
+								<h4>Hakkımızda</h4>
+							</div>
+							
+						</div>
+			
+					</div>
+				</div>
 
 
-<div class="row">
-    <div class="col-md-8">
-        <form asp-controller="Admin" asp-action="AboutAdd" method="post">
-            <div class="form-group row">
-                <label asp-for="AboutTitle" class="col-md-2 col-form-label"></label>
-                <div class="col-md-10">
-                    <input class="form-control"  asp-for="AboutTitle" value="" />
 
-                </div>
+				<!-- Default Basic Forms Start -->
+				<div class="pd-20 card-box mb-30">
+					<div class="clearfix">
+						<div class="pull-left">
+							<h4 class="text-blue h4">Hakkımızda Ekleme Sayfası</h4>
+						</div>
+						
+					</div>
+				@using(Html.BeginForm("AboutAdd","About",FormMethod.Post) ){
 
-            </div>
-            <div class="form-group row">
-                <label asp-for="Description" class="col-md-2 col-form-label"></label>
-                <div class="col-md-10">
-                    <input class="form-control"  asp-for="Description" value="" />
 
-                </div>
 
-            </div>
-    
 
-              <div class="form-group row">
-                <div class="col-md-10 offset-md-2">
-                    <button type="submit" v class="btn btn-primary">Save Product</button>
+							<div class="form-group row">
+							<label class="col-sm-12 col-md-2 col-form-label">Hakkımızda Başlık</label>
+							<div class="col-sm-12 col-md-10">
+								@Html.TextBoxFor(x=>x.AboutTitle,new{@class="form-control"})
+							</div>
+						</div>
 
-                </div>
 
-            </div>
-        </form>
-    </div>
-</div>
+
+					<div class="form-group row">
+						<label class="col-sm-12 col-md-2 col-form-label">Hakkımızda Başlık</label>
+						<div class="col-sm-12 col-md-10">
+							@Html.TextBoxFor(x=>x.Description,new{@class="form-control"})
+						</div>
+					</div>
+
+
+				
+				
+					
+
+     <button class="btn  btn-outline-primary w-100" type="submit"><i class="icon-copy fa fa-save" aria-hidden="true"></i> Kaydet</button>
+						
+					
+}
+		
+		
+
+	</div>

@@ -36,12 +36,17 @@ namespace Business.Concrete
 
         public List<Product> GetByCategory(int categoryId)
         {
-            return _productDal.GetList(x=>x.CategoryId==categoryId).ToList();
+            return _productDal.List(x=>x.CategoryId==categoryId).ToList();
         }
 
         public Product GetById(int id)
         {
             return _productDal.GetById(id);
+        }
+
+        public List<Product> GetByDetail(int id)
+        {
+            return _productDal.List(x => x.ProductId == id).ToList();
         }
 
         public List<Product> GetCategory(int categoryId)

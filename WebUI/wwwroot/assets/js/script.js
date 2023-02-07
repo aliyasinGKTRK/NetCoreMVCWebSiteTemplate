@@ -1,12 +1,4 @@
-/*-----------------------------------------------------------------------------------
 
- Template Name:Voxo
- Template URI: themes.pixelstrap.com/Voxo
- Description: This is Ecommerce website
- Author: Pixelstrap
- Author URI: https://themeforest.net/user/pixelstrap
-
- ----------------------------------------------------------------------------------- */
 // 01.Tap to top js
 // 02.Image to background js
 // 03.menu js

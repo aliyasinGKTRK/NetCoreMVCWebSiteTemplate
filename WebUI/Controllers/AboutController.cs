@@ -17,39 +17,31 @@ namespace WebUI.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var result = _aboutService.GetAll();
+            return View(result);
         }
 
         public IActionResult IndexDe()
         {
-            return View();
+            var result = _aboutService.GetAll();
+            return View(result);
         }
 
         public IActionResult IndexEng()
         {
-            return View();
+            var result = _aboutService.GetAll();
+            return View(result);
         }
 
         [HttpGet]
         public IActionResult AboutAdd()
         {
-            
-            return View();
+
+            var result = _aboutService.GetAll();
+            return View(result);
         }
 
-        [HttpPost]
-        public IActionResult AboutAdd(About about)
-        {
-            return RedirectToAction("AdminList","About");
-        }
-
-        public IActionResult AdminList()
-        {
-            return View();
-        }
-
-
-
+   
 
     }
 }

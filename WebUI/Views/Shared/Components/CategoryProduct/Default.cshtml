@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Entity.Product>
+
+<ul>
+    @foreach (var item in Model)
+    {
+            <li>
+        <a href="/Product/GetDetail/@item.ProductId">@item.ProductName</a>
+    </li>
+    }
+
+
+</ul>

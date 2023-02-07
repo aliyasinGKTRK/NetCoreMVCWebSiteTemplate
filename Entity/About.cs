@@ -14,6 +14,8 @@ namespace Entity
         public int AboutId { get; set; }
         public string? AboutTitle { get; set; }
         public string? Description { get; set; }
+        public string? DescriptionEng { get; set; }
+        public string? DescriptionDe { get; set; }
 
 
       

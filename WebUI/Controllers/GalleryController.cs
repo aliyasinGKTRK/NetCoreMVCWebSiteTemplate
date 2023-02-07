@@ -16,7 +16,8 @@ namespace WebUI.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var result = _galleryService.GetAll();
+            return View(result);
         }
     }
 }

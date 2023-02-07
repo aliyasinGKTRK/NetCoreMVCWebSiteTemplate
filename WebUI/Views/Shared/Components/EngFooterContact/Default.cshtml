@@ -1,0 +1,28 @@
+﻿@model List<Entity.Contact>
+
+<ul class="contact-lists">
+    @foreach (var item in Model)
+    {
+
+        <li>
+
+            <span>
+                <b>Telefon:</b> <span class="font-light"> @item.CompanyNumberTwo</span>
+            </span>
+
+        </li>
+        <li>
+            <span>
+                <b>Adresse:</b><span class="font-light">
+                    @item.CompanyAddress
+                </span>
+            </span>
+        </li>
+        <li>
+            <span>
+                <b>Mail:</b><span class="font-light"> @item.CompanyMail</span>
+            </span>
+        </li>
+    }
+
+</ul>

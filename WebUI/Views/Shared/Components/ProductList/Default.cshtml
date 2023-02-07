@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Entity.Product>   
+ 
+<section class="ratio_asos">
+        <div class="container">
+            <div class="row m-0">
+                <div class="col-sm-12 p-0">
+                    <div class="title title-2 text-center">
+                        <h2>Öne Cıkanlar</h2>
+                        <h5>Tufan Boya</h5>
+                    </div>
+                    <div class="product-wrapper slide-5 light-arrow bottom-space">
+                         @foreach (var item in Model)
+                            {
+                        <div>
+                           
+                            <div class="product-box">
+                                <div style="height: 430px;" class="img-wrapper">
+                                    <a href="/Product/GetDetail/@item.ProductId">
+                                        <img src="~/urunler/@item.ImagePath"
+                                         class="img-fluid bg-img blur-up lazyload" alt="">
+                                    </a>
+                                  
+                                </div>
+                                <div class="product-details text-center">
+                                    
+                                    <a href="/Product/GetDetail/@item.ProductId" class="font-default">
+                                        <h5>@item.ProductName</h5>
+                                    </a>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        }
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

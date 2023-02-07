@@ -5800,7 +5800,9 @@ header .main-navbar {
     .product-box .img-wrapper.bg-trans {
       background-color: transparent; }
     .product-box .img-wrapper .front-img {
-      overflow: hidden; }
+        background: #f7f7f7;
+        overflow: hidden;
+    }
     .product-box .img-wrapper .cart-info {
       display: -webkit-box;
       display: -ms-flexbox;

@@ -1,0 +1,110 @@
+﻿@model List<Entity.Product>
+
+@{
+    ViewData["Title"] = "SearchEng";
+    Layout = "~/Views/Shared/_EngLayout.cshtml";
+}
+<section class="breadcrumb-section section-b-space">
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3>Pass</h3>
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="/Home/IndexEng">
+                                <i class="fas fa-home"></i>
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">Products</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Breadcrumb section end -->
+<!-- Category Slider Section Start -->
+@await Component.InvokeAsync("EngProductPageCategory")
+<!-- Category Slider Section End -->
+<!-- Shop Section start -->
+<section class="section-b-space">
+    <div class="container">
+        <div class="row">
+
+            @await Component.InvokeAsync("EngProductListCategory")
+            <div class="col-lg-9 col-12 ratio_30">
+                <div class="row g-4">
+                    <!-- filter button -->
+                    <!-- filter button -->
+                    <!-- label and featured section -->
+
+                </div>
+                <!-- label and featured section -->
+                <!-- Prodcut setion -->
+                <div class="row g-sm-4 g-3 row-cols-lg-4 row-cols-md-3 row-cols-2 mt-1 custom-gy-5 product-style-2 ratio_asos product-list-section">
+                    @foreach (var item in Model)
+                    {
+                        <div>
+                            <div class="product-box">
+                                <div class="img-wrapper">
+
+                                    <div class="front">
+                                        <a href="/Product/GetDetailEng/@item.ProductId">
+                                            <img src="~/urunler/@item.ImagePath" class="bg-img blur-up lazyload" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="back">
+                                        <a href="/Product/GetDetailEng/@item.ProductId">
+                                            <img src="~/urunler/@item.ImagePath" class="bg-img blur-up lazyload" alt="">
+                                        </a>
+                                    </div>
+
+                                </div>
+                                <div class="product-details">
+                                    <span class="font-light grid-content">Tufan Boya Pass</span>
+
+                                    <div class="main-price">
+                                        <a href="/Product/GetDetailEng/@item.ProductId" class="font-default">
+                                            <h5 class="ms-0">@item.ProductNameEng</h5>
+                                        </a>
+
+                                        <div class="listing-content">
+                                            <p class="font-light">
+
+                                                @item.ProductDescriptionEng
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <a style="padding:0;" href="/Product/GetDetailEng/@item.ProductId" id="cartEffect" class="btn btn-solid hover-solid btn-animation">
+                                <span class="ysr">Go to Product </span>
+                            </a>
+                        </div>
+
+                    }
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>

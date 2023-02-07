@@ -14,6 +14,7 @@ namespace DataAccess.Abstract
         void Delete(T entity);
         List<T> GetAll();
         IList<T> GetList(Expression<Func<T, bool>> filter = null);
+        List<T> List(Expression<Func<T, bool>> filter);
 
         T GetById(int id);
 
