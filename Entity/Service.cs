@@ -1,5 +1,4 @@
-﻿using Entity.BaseProperty;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -8,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    public class Service:BaseClass
+    public class Service
     {
         [Key]
         public int ServiceId { get; set; }

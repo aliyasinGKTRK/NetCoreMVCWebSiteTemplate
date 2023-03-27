@@ -1,5 +1,4 @@
-﻿using Entity.BaseProperty;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -8,14 +7,13 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    public class About :BaseClass
+    public class About 
     {
         [Key]
         public int AboutId { get; set; }
         public string? AboutTitle { get; set; }
         public string? Description { get; set; }
-        public string? DescriptionEng { get; set; }
-        public string? DescriptionDe { get; set; }
+
 
 
       

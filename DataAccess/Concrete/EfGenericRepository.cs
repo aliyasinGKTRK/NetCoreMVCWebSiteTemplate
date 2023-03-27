@@ -15,7 +15,7 @@ namespace DataAccess.Concrete
     {
         public void Add(T entity)
         {
-            using (var context = new AppContext())
+            using (var context = new WebSiteContext())
             {
 
                 context.Set<T>().Add(entity);
@@ -25,7 +25,7 @@ namespace DataAccess.Concrete
 
         public void Delete(T entity)
         {
-            using (var context = new AppContext())
+            using (var context = new WebSiteContext())
             {
                 context.Set<T>().Remove(entity);
                 context.SaveChanges();
@@ -34,7 +34,7 @@ namespace DataAccess.Concrete
 
         public List<T> GetAll()
         {
-            using (var context = new AppContext())
+            using (var context = new WebSiteContext())
             {
 
                 return context.Set<T>().ToList();
@@ -43,7 +43,7 @@ namespace DataAccess.Concrete
 
         public T GetById(int id)
         {
-            using (var context = new AppContext())
+            using (var context = new WebSiteContext())
             {
                 return context.Set<T>().Find(id);
             }
@@ -51,7 +51,7 @@ namespace DataAccess.Concrete
 
         public IList<T> GetList(Expression<Func<T, bool>> filter = null)
         {
-            using (var context = new AppContext())
+            using (var context = new WebSiteContext())
             {
 
                 return filter == null
@@ -62,7 +62,7 @@ namespace DataAccess.Concrete
 
         public List<T> List(Expression<Func<T, bool>> filter )
         {
-            using (var context = new AppContext())
+            using (var context = new WebSiteContext())
             {
 
                 return filter == null
@@ -73,7 +73,7 @@ namespace DataAccess.Concrete
 
         public void Update(T entity)
         {
-            using (var context = new AppContext())
+            using (var context = new WebSiteContext())
             {
                 context.Entry(entity).State = EntityState.Modified;
                 context.SaveChanges();
